@@ -1,0 +1,78 @@
+@import "../mixins";
+
+.offers {
+  position: relative;
+  margin-bottom: 94px;
+
+  @include tablet {
+    margin-bottom: 76px;
+  }
+
+  @include mobile {
+    margin-bottom: 34px;
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    padding-top: 120px;
+    padding-left: 119px;
+    height: 388px;
+    box-sizing: border-box;
+    color: #fff;
+    background-image: url("../img/banner_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      height: 330px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      border-radius: 14px;
+      width: 100%;
+      height: 100%;
+      background-color: linear-gradient(0deg, rgba(41, 41, 41, 0.3), rgba(41, 41, 41, 0.3));
+    }
+
+    @media screen  and (max-width: 768px) {
+      padding-left: 60px;
+    }
+
+    &-title {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 41px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    &-subtitle {
+      display: block;
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #fff;
+    }
+
+    &-btn-look {
+      @include button;
+      margin-left: 15px;
+      width: 194px;
+      height: 42px;
+    }
+  }
+}
+
+.swiper-container-coverflow {
+  overflow: hidden;
+  margin: 0 auto;
+  min-width: 0;
+}

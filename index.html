@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+  <title>Айва | Магазин одежды</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="site-container">
+		@include('partials/header.html')
+
+    <main class="content">
+      <h1 class="visually-hidden">Айва | Магазин одежды</h1>
+      <div class="container">
+        <section class="offers">
+          <div class="swiper-container-coverflow">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide offers__slide offers__slide--1">
+                <div class="offers__slide-content">
+                  <h3 class="offers__slide-title">
+                    NEW!
+                  </h3>
+                  <p class="offers__slide-subtitle">
+                    мужские лонгсливы
+                  </p>
+                  <button class="offers__slide-btn-look btn-primary">
+                    посмотреть
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide offers__slide offers__slide--2">
+                <div class="offers__slide-content">
+                  <h3 class="offers__slide-title">
+                    NEW!
+                  </h3>
+                  <p class="offers__slide-subtitle">
+                    мужские лонгсливы
+                  </p>
+                  <button class="offers__slide-btn-look btn-primary">
+                    посмотреть
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide offers__slide offers__slide--3">
+                <div class="offers__slide-content">
+                  <h3 class="offers__slide-title">
+                    NEW!
+                  </h3>
+                  <p class="offers__slide-subtitle">
+                    мужские лонгсливы
+                  </p>
+                  <button class="offers__slide-btn-look btn-primary">
+                    посмотреть
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide offers__slide offers__slide--4">
+                <div class="offers__slide-content">
+                  <h3 class="offers__slide-title">
+                    NEW!
+                  </h3>
+                  <p class="offers__slide-subtitle">
+                    мужские лонгсливы
+                  </p>
+                  <button class="offers__slide-btn-look btn-primary">
+                    посмотреть
+                  </button>
+                </div>
+              </div>
+              <div class="swiper-slide offers__slide offers__slide--5">
+                <div class="offers__slide-content">
+                  <h3 class="offers__slide-title">
+                    NEW!
+                  </h3>
+                  <p class="offers__slide-subtitle">
+                    мужские лонгсливы
+                  </p>
+                  <button class="offers__slide-btn-look btn-primary">
+                    посмотреть
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-button-next swiper-button-next--white swiper-button-next--offer"></button>
+            <button class="swiper-button-prev swiper-button-next--white swiper-button-prev--offer"></button>
+          </div>
+        </section>
+        <section class="main__categories categories">
+          <h2 class="title categories__title">
+            Категории
+          </h2>
+          <div class="categories__slider-wrapper">
+            <div class="swiper-container categories__swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide categories__item">
+                  <a href="#" class="categories__link">
+                    <img class="categories__img" loadi src="img/categories/socks.jpg">
+                    <h3 class="categories__name">
+                      Носки
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide categories__item">
+                  <a href="#" class="categories__link">
+                    <img class="categories__img" loadi src="img/categories/mittens.jpg">
+                    <h3 class="categories__name">
+                      Варежки
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide categories__item">
+                  <a href="#" class="categories__link">
+                    <img class="categories__img" loadi src="img/categories/cardigans.jpg">
+                    <h3 class="categories__name">
+                      Кардиганы
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide categories__item">
+                  <a href="#" class="categories__link">
+                    <img class="categories__img" loadi src="img/categories/scarves.jpg">
+                    <h3 class="categories__name">
+                      Шарфы
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide categories__item">
+                  <a href="#" class="categories__link">
+                    <img class="categories__img" loadi src="img/categories/hats.jpg">
+                    <h3 class="categories__name">
+                      Шапки
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide categories__item">
+                  <a href="#" class="categories__link">
+                    <img class="categories__img" loadi src="img/categories/hats.jpg">
+                    <h3 class="categories__name">
+                      Шапки
+                    </h3>
+                  </a>
+                </div>
+                <div class="swiper-slide categories__item">
+                  <a href="#" class="categories__link">
+                    <img class="categories__img" loadi src="img/categories/hats.jpg">
+                    <h3 class="categories__name">
+                      Шапки
+                    </h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="swiper-button-next swiper-button-next--black categories__swiper-button-next"></button>
+            <button class="swiper-button-prev swiper-button-next--black categories__swiper-button-prev"></button>
+          </div>
+        </section>
+        @include('partials/catalog-menu.html')
+        @include('partials/products.html')
+        @include('partials/details.html')
+        @include('partials/pictures.html')
+      </div>
+    </main>
+    @include('partials/footer.html')
+		<!-- @include('html/h1.html') пример инклуда -->
+  </div>
+  <script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+  <script>
+    const mySwiperOffer = new Swiper('.swiper-container-coverflow', {
+      // Optional parameters
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 0,
+        depth: 400,
+        modifier: 1
+      },
+      slidesPerView: 3,
+      centeredSlides: true,
+      loop: true,
+      slideShadows: false,
+
+      breakpoints: {
+        320: {
+          effect: "slide",
+          slidesPerView: 1,
+          spaceBetween: 20,
+          pagination: {
+            el: '.swiper-pagination',
+          }
+        },
+        576: {
+          slidesPerView: 2,
+          coverflowEffect: {
+            rotate: 0,
+            depth: 300,
+            stretch: 92,
+            modifier: 1
+          },
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next--offer',
+        prevEl: '.swiper-button-prev--offer',
+      },
+    });
+    const swiperCategories = new Swiper('.swiper-container', {
+      // Optional parameters
+      slideShadows: false,
+      breakpoints: {
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        576: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 5
+        }
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.categories__swiper-button-next',
+        prevEl: '.categories__swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+@mixin ui_slider {
+
+  .noUi-connects {
+    border-radius: 3px;
+    height: 2px;
+
+    @include tablet {
+      height: 4px;
+    }
+
+    @include mobile {
+      height: 2px;
+    }
+  }
+
+  .noUi-target {
+    padding-left: 10px;
+    width: 187px;
+    border-radius: 3px;
+    box-shadow: none;
+    height: 1px;
+
+    @include tablet {
+      width: 380px;
+    }
+
+    @include mobile {
+      width: 187px;
+    }
+  }
+
+  .noUi-connect {
+    background: $yellow;
+  }
+
+  .noUi-handle {
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    background: $yellow;
+    box-shadow: 0px 2px 10px #C9880B;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    @include tablet {
+      top: -15px;
+      width: 32px;
+      height: 32px;
+    }
+
+    @include mobile {
+      top: -7px;
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .noUi-handle-upper {
+    right: -5px;
+  }
+  .noUi-handle-lower {
+    left: 5px;
+  }
+
+}

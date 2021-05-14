@@ -1,0 +1,140 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--color-white);
+  color: #4d4d4d;
+
+  &.scroll-off {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button,
+input[type="submit"] {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+.is-outer {
+  position: relative !important; // stylelint-disable-line declaration-no-important
+  left: -9999px !important; // stylelint-disable-line declaration-no-important
+}
+
+.site-container {
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.for-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.error {
+  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
+}
+
+.btn-reset {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1330px;
+
+  @include mobile {
+    padding: 0 10px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 57px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 32px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.btn-primary {
+  @include button;
+}
+
+.btn-secondary {
+  width: 148px;
+  height: 29px;
+  border: 1px solid $yellow;
+  box-sizing: border-box;
+  border-radius: 28px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}

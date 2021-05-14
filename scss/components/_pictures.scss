@@ -1,0 +1,45 @@
+.pictures {
+  margin-bottom: 50px;
+
+  @media (max-width: 576px) {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 20px;
+
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 10px;
+    } 
+  }
+
+  &__image {
+    position: relative;
+    font-size: 0;
+
+    a {
+      display: block;
+      height: 100%;
+    }
+        
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: var(--color-orange);
+      opacity: 0.4;
+    }
+  }
+  .nonvisible {
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,147 @@
+.products {
+
+  &__item {
+    width: 25%;
+    padding-top: 40px;
+
+  }
+
+  &__product {
+    width: 100%;
+  }
+}
+
+.product {
+  &__title {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+
+  &__title a {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-darkgrey);
+  }
+
+  &__price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__fav {
+    position: absolute;
+    bottom: 22px;
+    right: 27px;
+    background-image: url(../img/vector.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 52px;
+    height: 40px;
+  }
+
+  &__pagination {
+    display: inline-flex;
+
+    :not(:last-child) {
+      margin-right: 10px;
+    }
+
+    .item-dark {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-dark);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .item-green {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-green);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .item-blue {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-blue);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .item-white {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-white);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid var(--color-darkgrey);
+
+    }
+
+    .item-violet {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-violet);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .item-orange {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-orange);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .item-yellow {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-yellow);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .item-brown {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-brown);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+
+    :not(:last-child) {
+      margin-right: 20px;
+    }
+
+  }
+}

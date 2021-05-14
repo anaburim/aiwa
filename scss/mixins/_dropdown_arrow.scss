@@ -1,0 +1,8 @@
+@mixin dropdown_arrow {
+  content: '';
+  margin-left: 5px;
+  display: inline-block;
+  width: 14px;
+  height: 8px;
+  background: url("../img/arrow_down.svg") no-repeat center;
+}

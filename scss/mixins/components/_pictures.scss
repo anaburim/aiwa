@@ -1,0 +1,29 @@
+.pictures {
+  margin-bottom: 50px;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    position: relative;
+    width: 25%;
+
+    &:not(:last-child) {
+      padding-right: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: var(--color-orange);
+      opacity: 0.4;
+    }
+  }
+}

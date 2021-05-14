@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+	<title>Айва | Каталог</title>
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/catalog-card.css">
+</head>
+
+<body>
+	<div class="site-container">
+		@include('partials/header.html')
+
+		<main class="content">
+			<h1 class="content__title title">
+				Каталог
+			</h1>
+			<div class="container">
+				<div class="categories">
+					<h3 class="categories__title">
+						Категории
+					</h3>
+					<ul class="categories__list">
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="cardigans">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Кардиганы
+									</span>
+								</span>
+							</label>
+						</li>
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="sweaters">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Свитера
+									</span>
+								</span>
+							</label>
+						</li>
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="jackets">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Жилеты
+									</span>
+								</span>
+							</label>
+						</li>
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="poncho">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Пончо
+									</span>
+								</span>
+							</label>
+						</li>
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="mittens">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Варежки
+									</span>
+								</span>
+							</label>
+						</li>
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="socks">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Носки
+									</span>
+								</span>
+							</label>
+						</li>
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="scarves">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Шарфы
+									</span>
+								</span>
+							</label>
+						</li>
+						<li class="categories__item">
+							<label class="categories-tablet">
+								<input class="categories-tablet__input" type="checkbox" name='categories' data-type="hats">
+								<span class="categories-tablet__value">
+									<img class="categories-tablet__pic" src="img/categories-tablet-1.png" alt="Кардиганы">
+									<span class="cateories-tablet__text">
+										Шапки
+									</span>
+								</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<aside class="content__props props">
+					<div class="props__categories">
+						<h2 class="props__title">
+							Категории
+						</h2>
+						<ul class="props__list">
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="cardigans">
+									<span class="custom-checkbox-primary__value">
+										<span>Кардиганы</span>
+										<span>14</span>
+									</span>
+								</label>
+							</li>
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="sweaters">
+									<span class="custom-checkbox-primary__value">
+										<span>Свитера</span>
+										<span>10</span>
+									</span>
+								</label>
+							</li>
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="waistcoat">
+									<span class="custom-checkbox-primary__value">
+										<span>Жилеты</span>
+										<span>12</span>
+									</span>
+								</label>
+							</li>
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="poncho">
+									<span class="custom-checkbox-primary__value">
+										<span>Пончо</span>
+										<span>8</span>
+									</span>
+								</label>
+							</li>
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="mittens">
+									<span class="custom-checkbox-primary__value">
+										<span>Варежки</span>
+										<span>54</span>
+									</span>
+								</label>
+							</li>
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="socks">
+									<span class="custom-checkbox-primary__value">
+										<span>Носки</span>
+										<span>32</span>
+									</span>
+								</label>
+							</li>
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="scarves">
+									<span class="custom-checkbox-primary__value">
+										<span>Шарфы</span>
+										<span>23</span>
+									</span>
+								</label>
+							</li>
+							<li class="props__item">
+								<label class="custom-checkbox-primary">
+									<input class="custom-checkbox-primary__input" type="checkbox" value="hats">
+									<span class="custom-checkbox-primary__value">
+										<span>Шапки</span>
+										<span>12</span>
+									</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="props__filters filters">
+						<form action="#" class="filters__form">
+							<h2 class="props__title">
+								Фильтры
+							</h2>
+							<div class="filters__list">
+								<div class="filters__item props__view-cards-block">
+									<button class="btn-view btn-view--list">
+										<svg width="17" height="14" viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect x="9" width="42" height="3" fill="#B0A798" />
+											<rect width="4" height="3" fill="#B0A798" />
+											<rect x="9" y="19" width="42" height="3" fill="#B0A798" />
+											<rect y="19" width="4" height="3" fill="#B0A798" />
+											<rect x="9" y="38" width="42" height="3" fill="#B0A798" />
+											<rect y="38" width="4" height="3" fill="#B0A798" />
+										</svg>
+									</button>
+									<button class="btn-view btn-view--rect is-active">
+										<svg width="17" height="14" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect x="14.2859" width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect x="28.5713" width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect y="14.2857" width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect x="14.2859" y="14.2857" width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect x="28.5713" y="14.2857" width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect y="28.5714" width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect x="14.2859" y="28.5714" width="11.4286" height="11.4286" fill="#B0A798" />
+											<rect x="28.5713" y="28.5714" width="11.4286" height="11.4286" fill="#B0A798" />
+										</svg>
+									</button>
+								</div>
+								<div class="filters__item props__view-block">
+									<span class="props__view-block-text">
+										Показать по
+									</span>
+									<ul class="filters__checkbox-list">
+										<li class="filters__checkbox-list-item">
+											<label class="custom-checkbox-main">
+												<input type="checkbox" class="custom-checkbox-main__input">
+												<span class="custom-checkbox-main__value">
+													9
+												</span>
+											</label>
+										</li>
+										<li class="filters__checkbox-list-item">
+											<label class="custom-checkbox-main">
+												<input type="checkbox" class="custom-checkbox-main__input">
+												<span class="custom-checkbox-main__value">
+													12
+												</span>
+											</label>
+										</li>
+										<li class="filters__checkbox-list-item">
+											<label class="custom-checkbox-main">
+												<input type="checkbox" class="custom-checkbox-main__input">
+												<span class="custom-checkbox-main__value">
+													18
+												</span>
+											</label>
+
+										</li>
+										<li class="filters__checkbox-list-item">
+											<label class="custom-checkbox-main">
+												<input type="checkbox" class="custom-checkbox-main__input">
+												<span class="custom-checkbox-main__value">
+													24
+												</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="filters__item filters__item--sex">
+									<h3 class="filters__title">
+										Пол
+									</h3>
+									<div class="filters__body">
+										<ul class="filters__checkbox-list">
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input type="checkbox" class="custom-checkbox-main__input" value="male">
+													<span class="custom-checkbox-main__value">М</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input type="checkbox" class="custom-checkbox-main__input" value="female">
+													<span class="custom-checkbox-main__value">Ж</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="filters__item">
+									<h3 class="filters__title">
+										Цвет
+									</h3>
+									<div class="filters__body">
+										<ul class="filters__checkbox-list">
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="blue">
+													<span class="color-checkbox__value-wrapper blue">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="green">
+													<span class="color-checkbox__value-wrapper green">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="orange">
+													<span class="color-checkbox__value-wrapper orange">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="purple">
+													<span class="color-checkbox__value-wrapper purple">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="yellow">
+													<span class="color-checkbox__value-wrapper yellow">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="black">
+													<span class="color-checkbox__value-wrapper black">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="red">
+													<span class="color-checkbox__value-wrapper red">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item filters__checkbox-list-item--color">
+												<label class="color-checkbox">
+													<input class="color-checkbox__input" type="checkbox" value="white">
+													<span class="color-checkbox__value-wrapper white">
+														<span class="color-checkbox__value"></span>
+													</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="filters__item">
+									<h3 class="filters__title">
+										Размер
+									</h3>
+									<div class="filters__body">
+										<ul class="filters__checkbox-list">
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input class="custom-checkbox-main__input" type="checkbox" value="xs">
+													<span class="custom-checkbox-main__value">XS</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input class="custom-checkbox-main__input" type="checkbox" value="s">
+													<span class="custom-checkbox-main__value">S</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input class="custom-checkbox-main__input" type="checkbox" value="m">
+													<span class="custom-checkbox-main__value">M</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input class="custom-checkbox-main__input" type="checkbox" value="l">
+													<span class="custom-checkbox-main__value">L</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input class="custom-checkbox-main__input" type="checkbox" value="xl">
+													<span class="custom-checkbox-main__value">XL</span>
+												</label>
+											</li>
+											<li class="filters__checkbox-list-item">
+												<label class="custom-checkbox-main">
+													<input class="custom-checkbox-main__input" type="checkbox" value="xxl">
+													<span class="custom-checkbox-main__value">XXL</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="filters__item price-filter">
+									<h3 class="filters__title">
+										Цена
+									</h3>
+									<div class="price-filter__body">
+										<div class="price-filter__inputs-block">
+											<input type="text" class="price-filter__input" placeholder="100" id="input-min">
+											<input type="text" class="price-filter__input" placeholder="10000" id="input-max">
+										</div>
+										<div class="price-filter__slider" id="range-slider"></div>
+									</div>
+								</div>
+								<div class="filters__item filters__item--dropdown dropdown">
+									<h3 class="filters__title dropdown__btn">
+										Узор
+									</h3>
+									<div class="dropdown__body">
+										<ul class="dropdown__list">
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="dotted">
+													<span class="custom-checkbox__value">В горошек</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="animals">
+													<span class="custom-checkbox__value">С животными</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="trees">
+													<span class="custom-checkbox__value">С ёлками</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="flowers">
+													<span class="custom-checkbox__value">С цветами</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="filters__item filters__item--dropdown dropdown">
+									<h3 class="filters__title dropdown__btn">
+										Материалы
+									</h3>
+									<div class="dropdown__body">
+										<ul class="dropdown__list">
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="wool">
+													<span class="custom-checkbox__value">Шерсть</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="cotton">
+													<span class="custom-checkbox__value">Хлопок</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="synthetics">
+													<span class="custom-checkbox__value">Синтетика</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="leather">
+													<span class="custom-checkbox__value">Кожа</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="filters__item filters__item--dropdown dropdown">
+									<h3 class="filters__title dropdown__btn">
+										Детали
+									</h3>
+									<div class="dropdown__body">
+										<ul class="dropdown__list">
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="buttons">
+													<span class="custom-checkbox__value">С пуговицами</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="hood">
+													<span class="custom-checkbox__value">С капюшоном</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="rhinestones">
+													<span class="custom-checkbox__value">Со стразами</span>
+												</label>
+											</li>
+											<li class="dropdown__item">
+												<label class="custom-checkbox">
+													<input class="custom-checkbox__input" type="checkbox" value="frill">
+													<span class="custom-checkbox__value">С оборкой</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<button class="filters__btn-apply">
+								Применить фильтр
+							</button>
+							<button class="filters__btn-clear-filters">
+								Очистить фильтр
+							</button>
+						</form>
+					</div>
+				</aside>
+				<section class="catalog">
+					<div class="catalog__sorting-block">
+						<button class="btn-secondary catalog__btn-category">Категории</button>
+						<button class="btn-secondary catalog__btn-filters">Фильтры</button>
+						<div class="catalog__view-block">
+							<span>Показывать:</span>
+							<ul class="catalog__view-list">
+								<li class="catalog__view-item">
+									<button class="catalog__view-count-btn is-active">9</button>
+								</li>
+								<li class="catalog__view-item">
+									<button class="catalog__view-count-btn">12</button>
+								</li>
+								<li class="catalog__view-item">
+									<button class="catalog__view-count-btn">18</button>
+								</li>
+								<li class="catalog__view-item">
+									<button class="catalog__view-count-btn">24</button>
+								</li>
+							</ul>
+						</div>
+						<div class="catalog__view-cards-block">
+							<button class="btn-view btn-view--list">
+								<svg width="17" height="14" viewBox="0 0 51 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="9" width="42" height="3" fill="#B0A798" />
+									<rect width="4" height="3" fill="#B0A798" />
+									<rect x="9" y="19" width="42" height="3" fill="#B0A798" />
+									<rect y="19" width="4" height="3" fill="#B0A798" />
+									<rect x="9" y="38" width="42" height="3" fill="#B0A798" />
+									<rect y="38" width="4" height="3" fill="#B0A798" />
+								</svg>
+							</button>
+							<button class="btn-view btn-view--rect is-active">
+								<svg width="17" height="14" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect x="14.2859" width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect x="28.5713" width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect y="14.2857" width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect x="14.2859" y="14.2857" width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect x="28.5713" y="14.2857" width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect y="28.5714" width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect x="14.2859" y="28.5714" width="11.4286" height="11.4286" fill="#B0A798" />
+									<rect x="28.5713" y="28.5714" width="11.4286" height="11.4286" fill="#B0A798" />
+								</svg>
+							</button>
+						</div>
+						<select name="sorting" id="sortselect" class="custom-select catalog__view-select js-choice">
+							<option value="popular">
+								По популярности
+							</option>
+							<option value="price_up">
+								По увеличению цены
+							</option>
+							<option value="price_down">
+								Поуменьшению цены
+							</option>
+							<option value="new">
+								По новинкам
+							</option>
+						</select>
+						<div class="catalog__goods-count">
+							<span>32</span>
+							<span>товара</span>
+						</div>
+					</div>
+          <ul class="catalog__list">
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+            @include('partials/catalog-card.html')
+          </ul>
+				</section>
+			</div>
+		</main>
+
+		@include('partials/footer.html')
+		<script src="js/vendor.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			const defaultSelect = () => {
+				const element = document.querySelector('.js-choice');
+				const choices = new Choices(element, {
+					searchEnabled: false
+				});
+			};
+
+			defaultSelect();
+		</script>
+</body>
+
+</html>

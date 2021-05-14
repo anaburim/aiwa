@@ -1,0 +1,88 @@
+.details {
+  display: flex;
+  background-image: url(../img/wool.png);
+  margin-bottom: 95px;
+
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    padding: 82px 160px 75px 160px;
+
+  }
+
+  &__info {
+    width: 1119px;
+    border-radius: 30px;
+    background-color: rgba($color: #fff, $alpha: 1.0);
+    padding-left: 100px;
+    padding-top: 70px;
+
+  }
+
+  &__title {
+    font-family: "Nunito", sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    margin-top: 0;
+    text-align: center;
+    color: var(--color-darkgrey);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
+  &__more {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--color-darkgrey);
+    margin-top: 0;
+
+  }
+
+}
+
+.details__descr {
+
+  display: flex;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+
+  &__item {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    width: 50%;
+    color: var(--color-darkgrey);
+  }
+
+  &__item-one {
+    background-image: url(../img/growth.png);
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+  }
+
+  &__item-two {
+    background-image: url(../img/Group.png);
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    padding-left: 100px;
+    padding-bottom: 50px;
+  }
+
+  &__item-three {
+    background-image: url(../img/truck.png);
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    padding-left: 100px;
+  }
+
+  &__item-four {
+    background-image: url(../img/planet.png);
+    background-repeat: no-repeat;
+    padding-left: 100px;
+  }
+
+}

@@ -1,0 +1,86 @@
+@mixin color-checkbox {
+  .color-checkbox {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+
+    &__value {
+      width: 22px;
+      height: 22px;
+      border-radius: 100%;
+    }
+
+    &__value-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid transparent;
+      border-radius: 100%;
+      width: 26px;
+      height: 26px;
+      box-sizing: content-box;
+
+      &.blue {
+        & span {
+          background: #40697F;
+        }
+      }
+
+      &.green {
+        & span {
+          background: #477640;
+        }
+      }
+
+      &.orange {
+        & span {
+          background: $yellow;
+        }
+      }
+
+      &.purple {
+        & span {
+          background: #977DAD;
+        }
+      }
+
+      &.yellow {
+        & span {
+          background: #F7FA7A;
+        }
+      }
+
+      &.black {
+        & span {
+          background: #35405C;
+        }
+      }
+
+      &.red {
+        & span {
+          background: $red;
+        }
+      }
+
+      &.white {
+        & span {
+          background: #fff;
+          border: 1px solid $main;
+        }
+      }
+    }
+
+    &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    &__input:checked + &__value-wrapper {
+      border: 2px solid $main;
+      background: none;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@mixin custom-select {
+  .choices {
+    margin-bottom: 0;
+
+    @include tablet {
+      display: none;
+    }
+
+    .choices__inner {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: none;
+      width: 218px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: #fff;
+      font-family: "Nunito", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .choices[data-type*=select-one]:after {
+    top: 33% !important;
+    right: 48px !important;
+    margin: 0 !important;
+    transition: transform 0.3s ease-in-out;
+    border-style: none;
+    @include dropdown_arrow
+  }
+
+  .choices.is-open::after {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .is-open {
+    .choices__inner {
+      border-radius: 10px;
+      border-bottom-right-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+
+    .choices__list--dropdown {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 18px #BEBEBE;
+
+      .choices__item:not(:last-child) {
+        border-bottom: 1px solid $yellow;
+      }
+
+      & .choices__item--selectable {
+        padding-right: 0;
+      }
+    }
+
+    .choices__item--selectable {
+      &.is-highlighted {
+        background-color: $yellow;
+        color: #fff;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

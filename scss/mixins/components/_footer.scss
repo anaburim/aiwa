@@ -1,0 +1,210 @@
+.footer {
+  padding: 55px 0 95px;
+  background: #36386F;
+  color: #fff;
+
+  @include tablet {
+    padding: 64px 0 83px;
+  }
+
+  @include mobile {
+    padding: 36px 0 43px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo-link {
+    display: none;
+
+   @include tablet {
+     display: block;
+     margin-bottom: 76px;
+   }
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__menu {
+    margin-bottom: 95px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    @include tablet {
+      margin-bottom: 89px;
+      order: 1;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      margin-bottom: 53px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 44px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+
+    @include tablet {
+      display: none;
+    }
+
+    &--catalog {
+      columns: 2;
+
+      @include tablet {
+        display: none;
+      }
+
+      .footer__list-item:nth-child(4) {
+        margin-bottom: 0;
+      }
+
+      .footer__list-item:nth-child(1) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__list-item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__list-link {
+    color: #fff;
+  }
+
+  &__contacts {
+    margin-bottom: 63px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__contacts-link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 26px;
+    color: #fff;
+
+    &:first-child {
+      margin-right: 60px;
+
+      @include tablet {
+        margin-right: 0;
+        margin-bottom: 35px;
+      }
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__socials {
+    margin-bottom: 76px;
+
+    @include tablet {
+      margin-bottom: 90px;
+    }
+
+    @include mobile {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__agreement {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+
+    @include tablet {
+      order: 2;
+    }
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 57px;
+
+    @include mobile {
+      margin-right: 26px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background-color: transparent;
+
+    &--instagram {
+      background: url("../img/insta.svg") no-repeat center center;
+    }
+
+    &--vkontakte {
+      background: url("../img/vk.svg") no-repeat center center;
+    }
+
+    &--facebook {
+      background: url("../img/facebook.svg") no-repeat center center;
+    }
+
+  }
+
+}

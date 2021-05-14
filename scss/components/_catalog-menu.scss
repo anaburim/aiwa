@@ -1,0 +1,189 @@
+.title {
+  font-family: "Nunito", sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 55px;
+  margin-bottom: 65px;
+  text-align: center;
+}
+
+.catalog-menu {
+
+  &__list {
+    display: flex;
+    margin-bottom: 55px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+
+    @media (max-width: 1150px) {
+      margin-right: 20px;
+    } 
+    
+    @include tablet {
+      margin-right: auto;
+    }
+  }
+
+  &__item:nth-child(2) {
+    position: relative;
+  }
+
+  &__btn-item {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 6px 17px;
+    padding-right: 29px;
+    color: var(--color-darkgrey);
+    background-image: url(../img/pointer.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 16px) center;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-color: var(--color-orange);
+    border-radius: 14px;
+    
+
+    &:hover {
+      background-color: var(--color-orange);
+      transition-duration: 0.3s;
+    }
+  }
+.hide {
+  @include tablet {
+    display: none;
+  }
+}
+
+.filters {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+  &__dropdown {
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 2px 18px #BEBEBE;
+    border-radius: 10px;
+  }
+
+  .color {
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      border-bottom: none !important;
+      
+      &:not(:first-child) {
+        padding-top: 10px;
+      }
+      
+  }
+
+    .dropdown__item {
+    width: auto;
+    height: auto;
+    padding: 9px;
+    border-bottom: 1px solid;
+    border-bottom-color: var(--color-orange);
+
+    &:hover {
+      background-color: var(--color-orange);
+      transition-duration: 0.3s;
+    }
+
+  }
+
+  .dropdown__link {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--color-darkgrey);
+  }
+
+  .dropdown {
+
+    &__body {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 30px;
+      z-index: 3;
+      width: 100%;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 18px #bebebe;
+      border-radius: 10px;
+      margin-top: 10px;
+      
+  }
+
+  .big {
+    width: 120%;
+  }
+  
+    &__item-blue {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-blue);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    &__item-white {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-white);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid var(--color-darkgrey);
+    }
+
+    &__item-green {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-green);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    &__item-brown {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-brown);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    &__item-orange {
+      display: block;
+      padding-right: 10px;
+      background-repeat: no-repeat;
+      background-color: var(--color-orange);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+}
+
+

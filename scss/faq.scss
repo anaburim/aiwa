@@ -1,0 +1,165 @@
+@import "./components/header";
+@import "./components/footer";
+@import "./mixins";
+
+.content {
+	padding-bottom: 94px;
+
+	&__title {
+		margin-bottom: 62px;
+		text-align: center;
+		font-family: "Nunito", sans-serif;
+		font-weight: 600;
+		font-size: 42px;
+		line-height: 57px;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include tablet {
+			font-size: 30px;
+			line-height: 32px;
+		}
+
+		@include mobile {
+			margin-bottom: 23px;
+			font-size: 16px;
+			line-height: 18px;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.faq-item {
+	padding: 23px;
+	border: 1px solid var(--color-darkgrey);
+	box-sizing: border-box;
+	border-radius: 10px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 400;
+
+	&:not(:last-child) {
+		margin-bottom: 25px;
+	}
+
+	@include mobile {
+		padding: 17px 14px;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 20px;
+		line-height: 27px;
+		text-transform: uppercase;
+
+		@include mobile {
+			font-size: 16px;
+			line-height: 20px;
+			text-transform: none;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		margin-left: 30px;
+		width: 28px;
+		height: 28px;
+		background: none;
+
+		@include mobile {
+			width: 16px;
+		}
+
+		.horizontal {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			display: inline-block;
+			width: 28px;
+			height: 2px;
+			background-color: var(--color-darkgrey);
+			transition: transform 0.1s ease-in-out;
+
+			@include mobile {
+				width: 16px;
+			}
+		}
+
+		.vertical {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			display: inline-block;
+			width: 28px;
+			height: 2px;
+			background-color: var(--color-darkgrey);
+			transform: rotate(90deg);
+
+			@include mobile {
+				width: 16px;
+			}
+
+			&.is-active {
+				transform: scale(0);
+				transition: transform 0.1s ease-in-out;
+			}
+		}
+	}
+
+	&__body {
+		animation-name: close;
+		animation-duration: 0.3s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in-out;
+
+		@keyframes close {
+			from {
+				padding-top: 25px;
+				height: 100%;
+				opacity: 1;
+			}
+
+			to {
+				padding-top: 0;
+				height: 0;
+				opacity: 0;
+			}
+		}
+
+		&.is-active {
+			animation-name: open;
+			animation-duration: 0.3s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in-out;
+
+			@keyframes open {
+				from {
+					padding-top: 0;
+					height: 0;
+					opacity: 0;
+				}
+
+				to {
+					padding-top: 25px;
+					height: 100%;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 19px;
+
+		@include tablet {
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+}

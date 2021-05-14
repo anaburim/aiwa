@@ -1,0 +1,55 @@
+@mixin custom-checkbox-main {
+  .custom-checkbox-main {
+    &__value {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #4D4D4D;
+      border-radius: 20px;
+      width: 43px;
+      height: 19px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+
+      @include desktop {
+        &:hover {
+          background-color: #F7C65A;
+          border: 1px solid #F7C65A;
+          color: #fff;
+          transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+      }
+
+      @include tablet {
+        width: 80px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @include mobile {
+        width: 43px;
+        height: 19px;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+
+    &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+
+    &__input:checked + &__value {
+      border: none;
+      background: #F7C65A;
+      color: #fff;
+    }
+  }
+}

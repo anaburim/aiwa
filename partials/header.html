@@ -1,0 +1,65 @@
+<header class="header">
+  <div class="container">
+    <button class="header__burger burger">
+      <span class="burger__line"></span>
+    </button>
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">
+            Каталог
+          </a>
+        </li>
+        <li class="header__menu-item dropdown">
+         <button class="header__menu-btn-customers dropdown__btn">
+           Покупателям
+         </button>
+         <div class="dropdown__body header__dropdown">
+           <ul class="dropdown__list">
+             <li class="dropdown__item">
+               <a href="#" class="dropdown__link">
+                 Оплата заказа
+               </a>
+             </li>
+             <li class="dropdown__item">
+               <a href="#" class="dropdown__link">
+                 Условия доставки
+               </a>
+             </li>
+             <li class="dropdown__item">
+               <a href="#" class="dropdown__link">
+                 Обмен и возврат заказа
+               </a>
+             </li>
+             <li class="dropdown__item">
+               <a href="#" class="dropdown__link">
+                 Уход за изделиями
+               </a>
+             </li>
+           </ul>
+         </div>
+        </li>
+        <li class="header__menu-item">
+          <a href="#" class="header__menu-link">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="header__logo-link">
+      <picture>
+        <source srcset="img/logo-mobile.png" media="(max-width: 576px)">
+        <img class="header__logo" src="img/logo.png" alt="Айва">
+      </picture>
+    </a>
+    <form class="header__search-block">
+      <input type="search" class="header__search">
+      <button class="header__search-btn"></button>
+    </form>
+    <div class="header__links-block">
+      <a href="#" class="header__btn header__btn--cart"></a>
+      <a href="#" class="header__btn header__btn--auth"></a>
+      <a href="#" class="header__btn header__btn--like"></a>
+    </div>
+  </div>
+</header>

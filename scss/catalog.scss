@@ -1,0 +1,453 @@
+@import "./components/header";
+@import "./components/footer";
+@import "./mixins";
+
+.content {
+  .container {
+    padding-bottom: 117px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin-bottom: 85px;
+  }
+
+  &__props {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      display: none;
+      position: absolute;
+      overflow-y: scroll;
+      left: 0;
+      top: 94px;
+      width: 100%;
+      height: 100%;
+      z-index: 7;
+      background-color: #fff;
+
+      &.is-active {
+        display: flex;
+      }
+    }
+  }
+}
+
+.props {
+  &__categories {
+    padding-left: 16px;
+    padding-bottom: 43px;
+    border-bottom: 1px solid $gray;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__filters {
+    padding-top: 51px;
+    padding-left: 16px;
+    padding-right: 23px;
+
+    @include mobile {
+      padding-left: 10px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 33px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-transform: uppercase;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__list {
+    padding-right: 33px;
+    margin-left: -16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    height: 39px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__view-cards-block {
+    @include desktop {
+      display: none;
+    }
+
+    @include tablet {
+      margin-right: 100px;
+    }
+  }
+
+  &__view-block {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__view-block-text {
+    display: block;
+    margin-bottom: 9px;
+  }
+}
+
+.filters {
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      padding-left: 65px;
+    }
+
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include tablet {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      text-transform: uppercase;
+    }
+
+    @include mobile {
+      padding-left: 12px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 44px;
+
+    @include tablet {
+      display: inline-block
+    }
+
+    &--dropdown {
+
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    &--sex {
+      @include tablet {
+        margin-right: 67px;
+      }
+    }
+  }
+
+  &__checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__checkbox-list-item:not(:last-child) {
+    margin-right: 7px;
+    margin-bottom: 10px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+  }
+
+  &__checkbox-list-item--color {
+    @include tablet {
+      margin-right: 11px;
+    }
+
+    @include mobile {
+      margin-right: 9px;
+    }
+  }
+
+  @include ui_slider;
+
+  &__btn-apply {
+    @include button;
+    margin-bottom: 35px;
+    width: 270px;
+
+    @include tablet {
+      width: 370px;
+      align-self: center;
+      order: 2;
+    }
+
+    @include mobile {
+      width: 180px;
+      height: 32px;
+    }
+  }
+
+  &__btn-clear-filters {
+    align-self: center;
+    background: none;
+    border: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: $gray;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 0;
+      height: 1px;
+      background-color: $gray;
+      transition: width 0.3s ease-in-out;
+    }
+
+    @include desktop {
+      &:hover::after {
+        width: 100%;
+        transition: width 0.3s ease-in-out;
+      }
+    }
+
+    @include tablet {
+      margin-bottom: 62px;
+      order: -1;
+      align-self: start;
+      text-decoration: underline;
+    }
+  }
+}
+
+.price-filter {
+  @include ui_slider;
+
+  @include tablet {
+    display: block;
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__inputs-block {
+    padding-right: 70px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      padding-right: 0;
+      margin-bottom: 30px;
+      width: 400px;
+    }
+
+    @include mobile {
+      width: 187px;
+    }
+  }
+
+  &__input {
+    border: none;
+    width: 35px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+  }
+}
+
+@include dropdown_list;
+@include custom-checkbox-main;
+@include custom-checkbox;
+@include color-checkbox;
+@include custom-checkbox-like-primary-btn;
+
+.catalog {
+  grid-column: 2/5;
+
+  &__sorting-block {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+
+    @include tablet {
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 29px;
+    }
+  }
+
+  &__btn-category {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__btn-filters {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__view-block {
+    margin-right: 48px;
+    display: flex;
+
+    &>span {
+      margin-right: 40px;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__view-cards-block {
+    margin-right: 55px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__view-list {
+    display: flex;
+  }
+
+  &__view-item:not(:last-child) {
+    margin-right: 10px;
+
+    &::after {
+      margin-left: 5px;
+      content: '/';
+      color: $gray;
+    }
+  }
+
+  &__view-count-btn {
+    background: transparent;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: $gray;
+
+    &.is-active {
+      color: $main;
+    }
+  }
+
+  &__view-select {
+    margin-right: 48px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__goods-count {
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.btn-view {
+  background: transparent;
+
+  @include tablet {
+    & svg {
+      width: 40px;
+      height: 41px;
+    }
+  }
+
+  &.is-active {
+
+    & rect {
+      fill: $main;
+    }
+  }
+
+  &--list {
+    margin-right: 12px;
+
+    @include tablet {
+      margin-right: 42px;
+
+      & svg {
+        width: 51px;
+      }
+    }
+  }
+}
+
+
+
+
+
+@include custom-select;
+@include categories-tablet;
+
+
+.catalog {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 20px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.catalog__list--full {
+  display: block;
+  grid-template-columns: none;
+}

@@ -1,0 +1,114 @@
+@import 'dropdown_arrow';
+
+@mixin dropdown_list {
+  .dropdown {
+    position: relative;
+
+    &__btn {
+      margin-bottom: 0;
+      cursor: pointer;
+
+      &::after {
+        @include dropdown_arrow;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    &__body {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 30px;
+      z-index: 3;
+      width: 218px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 18px #BEBEBE;
+      border-radius: 10px;
+
+      @include tablet {
+        position: static;
+        box-shadow: none;
+        width: auto;
+      }
+    }
+
+    &.is-active {
+      .dropdown__btn {
+        &::after {
+          @include dropdown_arrow;
+          transform: rotate(-180deg);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      .dropdown__body {
+        display: block;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 220px;
+      height: 37px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      font-family: "Nunito", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+
+      @include desktop {
+        &:hover {
+          background-color: #F7C65A;
+          transition: background-color 0.1s ease-in-out;
+        }
+
+        &:hover a {
+          color: #fff;
+          transition: color 0.1s ease-in-out;
+        }
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $yellow;
+      }
+
+      &:first-child {
+        border-radius: 10px 10px 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+
+    &__link {
+      padding-left: 9px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: $main;
+    }
+  }
+
+  .content .dropdown {
+    &__item {
+      & span {
+        font-size: 10px;
+        line-height: 12px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        background: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@mixin swiper-buttons {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 50%;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    background: none;
+
+    @include mobile {
+      display: none;
+    }
+
+    &--white {
+      border: 1px solid #fff;
+      background: transparent url('../img/arrow_side_white.svg') no-repeat center;
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background: #fff url('../img/arrow_side_black.svg') no-repeat center;
+        transition: background 0.2s ease-in-out;
+      }
+    }
+
+    &--black {
+      border: 1px solid #4D4D4D;
+      background: transparent url('../img/arrow_side_black.svg') no-repeat center;
+      transition: background 0.2s ease-in-out;
+
+      &:hover {
+        background: #000 url('../img/arrow_side_white.svg') no-repeat center;
+        transition: background 0.2s ease-in-out;
+      }
+    }
+
+    &::after {
+      content: '';
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+  }
+
+  .swiper-button-prev {
+    transform: rotate(180deg);
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fff;
+    border: 1px solid $main;
+    opacity: 1;
+
+    &-active {
+      background-color: $yellow;
+      border-color: transparent;
+    }
+  }
+}

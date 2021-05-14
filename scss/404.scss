@@ -1,0 +1,77 @@
+@import "./components/header";
+@import "./components/footer";
+@import "./mixins";
+
+.content {
+  padding: 0 50px 113px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet {
+    padding-bottom: 157px;
+  }
+
+  @include mobile {
+    padding-bottom: 65px;
+  }
+
+  &__error {
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-size: 340px;
+    line-height: 340px;
+    text-align: center;
+    background-image: url("../img/404.png");
+    background-size: contain;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include mobile {
+      font-size: 120px;
+      line-height: 164px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 33px;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 57px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+
+    @include tablet {
+      margin-bottom: 44px;
+    }
+
+    @include mobile {
+      margin-bottom: 23px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__btn {
+    width: 263px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      width: 173px;
+    }
+  }
+}
